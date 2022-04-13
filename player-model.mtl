@@ -1,0 +1,55 @@
+# Blender MTL File: 'None'
+# Material Count: 5
+
+newmtl Dieci_Rim
+Ns 714.201325
+Ka 0.777000 0.777000 0.777000
+Kd 0.012029 0.012029 0.012029
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Dieci_Tread
+Ns 396.371964
+Ka 0.490909 0.490909 0.490909
+Kd 0.000000 0.000000 0.000000
+Ks 0.145455 0.145455 0.145455
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.200000 /home/bira/Downloads/octane-rocket-league-car/source/D:/Models/Dieci/WHEEL_Caliber_SF/Texture2D/NormalMap.png
+map_Kd /home/bira/Downloads/octane-rocket-league-car/source/F:/3D/Models/Alpha Wheels/png_RocketLeague_W512_H512_F827611204_T_0XCFC5FBD73C06575E.png
+
+newmtl Octane_Chassis
+Ns 390.960741
+Ka 0.800000 0.800000 0.800000
+Kd 0.800000 0.800000 0.800000
+Ks 0.663636 0.663636 0.663636
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd /home/bira/Downloads/octane-rocket-league-car/source/F:/3D/Models/Octane/Octane Chasis Map.png
+
+newmtl Paint
+Ns 290.547515
+Ka 0.479091 0.479091 0.479091
+Kd 0.008594 0.008594 0.008594
+Ks 0.713636 0.713636 0.713636
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Window
+Ns 699.842965
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.236364 0.236364 0.236364
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
