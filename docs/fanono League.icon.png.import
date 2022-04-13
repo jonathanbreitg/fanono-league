@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fanono League.png-9aa368986780c5aadb191e9c78eb2506.stex"
+path="res://.import/fanono League.icon.png-6e4967cddfc17c30173731f50aa4daba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/fanono League.png"
-dest_files=[ "res://.import/fanono League.png-9aa368986780c5aadb191e9c78eb2506.stex" ]
+source_file="res://docs/fanono League.icon.png"
+dest_files=[ "res://.import/fanono League.icon.png-6e4967cddfc17c30173731f50aa4daba.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fanono League.apple-touch-icon.png-c0566082f62522dd25ad950f58991686.stex"
+path="res://.import/fanono League.apple-touch-icon.png-b94a9068278527aef9f35a9f41ab1b4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/fanono League.apple-touch-icon.png"
-dest_files=[ "res://.import/fanono League.apple-touch-icon.png-c0566082f62522dd25ad950f58991686.stex" ]
+source_file="res://docs/fanono League.apple-touch-icon.png"
+dest_files=[ "res://.import/fanono League.apple-touch-icon.png-b94a9068278527aef9f35a9f41ab1b4a.stex" ]
 
 [params]
 
