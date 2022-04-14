@@ -15,12 +15,13 @@ var self_composite = Vector3.ZERO
 var dodged = false
 var t_rotation = 0
 var anim
+var cam_mode = 1
 var copy_global_transfrom = global_transform
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	copy_global_transfrom = $"player-model/Camera".global_transform
-	def_camera = $"player-model/Camera".transform
-	global_def_camera = $"player-model/Camera".global_transform
+	copy_global_transfrom = $"player-model/ball_cam_trans/Camera".global_transform
+	def_camera = $"player-model/ball_cam_trans/Camera".transform
+	global_def_camera = $"player-model/ball_cam_trans/Camera".global_transform
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -47,21 +48,32 @@ func _process(delta):
 		apply_central_impulse(Vector3.UP * 250)
 
 	if Input.is_action_just_pressed("change_cam"):
-		ball_cam = !ball_cam
-	if ball_cam:
-		composite = get_parent().get_parent().get_node("ball/RigidBody").global_transform.origin
-		print(composite)
-		composite.y = global_transform.origin.y
-		self_composite = global_transform.origin
-		self_composite.y = $"player-model/Camera".global_transform.origin.y 
-		self_composite.x = $"player-model/Camera".global_transform.origin.x
-		$"player-model/Camera".look_at_from_position(self_composite,composite,Vector3.UP)
+		cam_mode = (cam_mode + 1) % 3
+	if cam_mode == 0:
+		#composite = get_parent().get_parent().get_node("ball/RigidBody").global_transform.origin
+		#print(composite)
+		#composite.y = global_transform.origin.y
+		#self_composite = global_transform.origin
+		#self_composite.y = $"player-model/ball_cam_trans/Camera".global_transform.origin.y 
+		#self_composite.x = $"player-model/ball_cam_trans/Camera".global_transform.origin.x
+	#	$"player-model/Camera".look_at_from_position(self_composite,composite,Vector3.UP)
+		#$"player-model/ball_cam_trans/Camera".look_at(composite,Vector3.UP)
+		#$"player-model/Camera".global_transform.origin = self_composite
 		$Label.visible = true
+		$"player-model/ball_cam_trans".is_ball_cam = true
 		#$TextureRect.visible = true
-	else:
-		$"player-model/Camera".transform = def_camera
+	elif cam_mode == 1:
+		#$"player-model/ball_cam_trans/Camera".transform = def_camera
 		$Label.visible = false
 		$TextureRect.visible = false
+		$"player-model/ball_cam_trans".free_cam = false
+		$"player-model/ball_cam_trans".is_ball_cam = false
+	elif cam_mode == 2:
+		$Label.visible = false
+		$TextureRect.visible = false
+		$"player-model/ball_cam_trans".is_ball_cam = false
+		$"player-model/ball_cam_trans".free_cam = true
+	print(cam_mode)
 
 func _on_Timer_timeout():
 	$TextureRect.visible = !$TextureRect.visible
